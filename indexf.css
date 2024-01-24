@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppines' , sans-serif;
+}
+body{
+    background: rgba(226, 226, 226, 0.98);
+    /* border: 2px solid blue; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+nav{
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 8;
+    /* overflow: hidden; */
+    /* justify-content: space-around; */
+}
+.image{
+    /* border: 1px solid red; */
+    width: 200px;
+    display: flex;
+    /* align-items: end; */
+    justify-content: end;
+}
+.image img{
+    width: 100px;
+}
+.search{
+    /* display: flex; */
+    /* border: 1px solid red; */
+    width: 500px;
+    flex-grow:0.5;
+    /* margin-left:50px ; */
+    /* text-align: center; */
+    padding-left: 30px;
+    align-items: center;
+    font-size: 23px;
+    position: relative;
+}
+.search input{
+    padding: 12px;
+    width: 100%;
+    font-size:17px ;
+    height: 35px;
+    border: 0;
+    outline: none;
+    background-color: rgba(226, 225, 225, 0.897);
+    border-radius: 10px;
+    padding-left:30px ;
+    /* border: 1px solid green; */
+    /* position: relative; */
+}
+.search i{
+    /* border: 1px solid red; */
+    cursor: pointer;
+    position: absolute;
+    /* text-align: center; */
+    color:rgba(136, 135, 135, 0.884);
+    font-size: 17px;
+    top: 8px;
+    left: 40px;
+}
+.btns{
+    /* border: 1px solid red; */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btns button{
+    /* border: 1px solid red; */
+    border: 0;
+    /* outline: none; */
+    font-size: 17px;
+    background: #fff;
+    padding: 10px 12px;
+    cursor: pointer;
+    display: flex;
+    gap:7px;
+    align-items: center; 
+    border-radius: 7px ; 
+}
+.login-button .log-in:hover{
+    background: rgb(45, 45, 253);
+    color: #fff;
+}
+.login-button:hover .fa-chevron-up{
+    /* border: 1px solid red; */
+    transform: rotateZ(180deg);
+    transition:0.2s;
+}
+.fa-chevron-up{
+    font-size: 13px;
+    /* border: 1px solid red; */
+}
+.login-container{
+    display: none;
+}
+.login-button:hover .login-container{
+    display: block;
+    position: absolute;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    font-size:14px;
+    background: #fff;
+    box-shadow: 9px 10px 20px 0.1px  rgba(104, 103, 103, 0.556);
+    /* margin-top: 7px; */
+}
+.menu-2 p{
+    /* border: 1px solid red; */
+    font-size: 27px;
+    width: 30px;
+    text-align: center;
+}
+.menu-2:hover{
+    border: 2px solid gainsboro;
+}
+.sub-menu-2{
+    display: none;
+}
+
+.menu-1:hover .sub-menu-2{
+    /* border: 1px solid red; */
+    display: block;
+    border-radius: 9px;
+    box-shadow:9px 10px 20px 0.1px  rgba(104, 103, 103, 0.556) ;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right:50px;
+    padding: 10px 12px;
+    /* font-size: 19px; */
+    background: #fff;
+    align-items: start;
+    /* width: 250px; */
+}
+.sub-menu-2 p{
+    /* border: 1px solid red; */
+    /* margin: 12px; */
+    padding: 12px;
+    width: 250px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.sub-menu-2 p:hover{
+    background: rgb(236, 235, 235);
+}
+.btns #login .login-container .login-container-heading{
+    border-bottom: 1px solid gainsboro;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.btns #login .login-container .login-container-heading .signUp{
+    border: 0;
+    color: rgb(43, 43, 253);
+    font-weight: 600;
+    /* background: transparent; */
+
+}
+.btns #login .login-container .login-container-item{
+    /* border: 1px solid blue; */
+    width: 250px;
+    margin-top: 7px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+.btns #login .login-container .login-container-item p{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+    padding: 12px;
+}
+.login-container-item p:hover{
+    background: rgb(236, 235, 235);
+}
+main{
+    /* border: 2px solid yellow; */
+    margin: 10px;
+    margin-top:120px ;
+}
+.main-heading{
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main-heading img{
+    width: 120px;
+    aspect-ratio: 1/1;
+}
+.main-heading p{
+    /* border: 1px solid red; */
+    margin-top: 12px;
+    text-align: center;
+}
+.scrolling-image{
+    /* border: 11px solid red; */
+    display: flex;
+    margin-top: 9px;
+    align-items: center;
+    background: #fff;
+    z-index: 0;
+    position: relative;
+    height: 250px;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+.logos{ 
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+.logos-slide{
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+.logos-slide img{
+    /* width: 100%; */
+    height: 250px;
+}
+.scrolling-image i{
+    position: absolute;
+    /* border: 1px solid blue; */
+    background: transparent;
+    backdrop-filter: blur(3px);
+    font-size: 20px;
+    padding: 115px 19px;
+    backdrop-filter: blue(20px);
+    cursor: pointer;
+}
+.back{
+    left: 0px;
+}
+.next{
+    right: 0px;
+}
+
+.img{
+    border: 2px solid greenyellow;
+    width: 120px;
+}
+main .maincontainer{
+    background: #fff;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+}
+main .maincontainer .heading{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+main .maincontainer .heading button{
+    border: 0;
+    background: blue;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    width: 23px;
+    aspect-ratio: 1/1;
+}
+main .maincontainer .heading button i{
+    font-size: 20px;
+    transform: rotateZ(90deg);
+}
+
+main .maincontainer .item{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+main .maincontainer .item div{
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .maincontainer .item div img{
+    width: 100px;
+    aspect-ratio: 1/1;
+    /* border: 1px solid red; */
+}
+
+main .maincontainer .item div p{
+    margin-top:12px ;
+}
+
+#login-1{
+    position: absolute;
+    background: blue;
+    border: none;
+    color: #fff;
+    margin-top: 9px;
+    z-index: 10;
+    width: 120px;
+    padding: 12px;
+    border-radius: 0;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.animation{
+    animation: 0.4s shake linear;
+}
+@keyframes shake {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(4px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(-4px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
+}
+#login-1 .square{
+    width: 17px;
+    aspect-ratio: 1/1;
+    transform: rotateZ(45deg);
+    margin-top: -20px;
+    background: blue;
+    /* border:1px solid wheat ; */
+}
+.close{
+    visibility: hidden;
+}
+
+#sign-page{
+    position: absolute;
+    width: 100%;
+    height: 104vh;
+    /* background-color: antiquewhite; */
+    z-index: 200;
+    backdrop-filter: blur(25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#sign-page .container{
+    /* border: 1px solid red; */
+    width: 100%;
+    min-width: 300px;
+    max-width: 780px;
+    height: 500px;
+    box-shadow: 1px 11px 17px 1px rgb(0 , 0 , 0 ,0.5);
+}
+.container{
+    display: flex;
+    position: absolute;
+}
+.container .part1{
+    border: 1px solid green;
+    width: 300px;
+    padding: 30px;
+    flex-grow: 1;
+    color: #fff;
+    background: rgb(73, 73, 214);
+    overflow: hidden;
+    /* line-height: 50px; */
+}
+.part1 h1{
+    font-weight: 600;
+    font-size: 33px;
+}
+.part1 p{
+    border: 1px soild red;
+    margin-top:23px ;
+    font-size: 23px;
+    color: rgb(228, 228, 231);
+}
+.part1 img{
+    /* border: 1px solid red; */
+    width: 100%;
+    min-width: 100px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.part2 i{
+    /* border: 1px solid red; */
+    text-align: end;
+    font-size: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.container .part2{
+    background: ghostwhite;
+    flex-grow: 2;
+    padding: 40px 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.part2 input{
+    padding: 12px 12px 0px 0px;
+    background-color: #fff;
+    font-size: 23px;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-bottom:2px solid blue ;
+    outline: none;
+}
+.part2 p{
+    /* margin-top: 30px; */
+    color: gray;
+    font-size: 12px;
+}
+.part2 p span{
+    color: blue;
+    cursor: pointer;
+}
+.part2 button{
+    margin-top: 12px;
+    padding: 17px 2px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px 1px rgb(0 ,0 , 0 , 0.5);
+}
+.part2 .sign-continue{
+    color: #fff;
+    background: orangered;
+}
+.part2 .sign-login{
+    color: blue;
+    /* background: #fff; */
+}
+.newaccount{
+    /* border: 1px solid red; */
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 12px;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.activesign{
+    z-index: 30;
+}
+
+.activeOTP{
+    /* border: 1px solid red; */
+    z-index: 20;
+}
+
+#otpPage{
+    /* border: 1px solid blue; */
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 460px;
+    display: flex;
+    align-items: center;
+    gap:17px;
+}
+#otpPage p{
+    color: black;
+    font-size: 17px;
+}
+#otpPage span{
+    color: blue;
+    cursor: pointer;
+}
+#otpPage .verifyOTP{
+    margin-top: 12px;
+    background:  rgb(73, 73, 214);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 9px;
+    border: 1px solid blue;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px 1px rgba(0 , 0, 0, 0.5);
+}
+#numberOTP{
+    /* border: 1px solid red; */
+    display: inline;
+}
+#otpPage .verifyOTP button{
+    /* background: transparent; */
+    /* border: 0; */
+    /* outline: none; */
+    /* color: #fff;
+    box-shadow: none; */
+}

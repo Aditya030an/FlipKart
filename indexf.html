@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipkard</title>
+    <link rel="stylesheet" href="./indexf.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="image">
+                <img src="./img/imagesFlip.jpg" alt="flipkard">
+            </div>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass "></i>
+                <input type="text" placeholder="Search for Products, Brands and More">
+            </div>
+            <div class="btns">
+                <div id="login">
+                    <div class="login-button">
+                        <button class="log-in">
+                            <i class="fa-regular fa-circle-user"></i>
+                                Login
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </button>
+                        <button id="login-1">
+                            <div class="square"></div>
+                            <div class="text">Login</div>
+                        </button>
+                        <div class="login-container">
+                            <div class="login-container-heading">
+                                <p>New customer?</p>
+                                <button class="signUp" onclick="openSign()">Sign Up</button>
+                            </div>
+                            <div class="login-container-item">
+                                <p><i class="fa-solid fa-circle-user"></i>My Profile</p>
+                                <p><i></i>Flipkart Plus Zone</p>
+                                <p><i class="fa-solid fa-box"></i>Order</p>
+                                <p><i class="fa-regular fa-heart"></i>Wishlist</p>
+                                <p><i class="fa-solid fa-gift"></i>Rewards</p>
+                                <p><i class="fa-regular fa-credit-card"></i>Gift Cards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-cart-shopping"></i>Card</button>
+                <button><i class="fa-solid fa-store"></i>Become a Seller</button>
+                <div class="menu-1">
+                    <button class="menu-2"><p>:</p></button>
+                    <div class="sub-menu-2">
+                        <p>Notification Preferneces</p>
+                        <p>24x7 Customer Care</p>
+                        <p>Advertise</p>
+                        <p>Download</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="sign-page">
+        <div class="container activesign" id="sign">
+            <div class="part1">
+                <h1>Looks like you're new here!</h1>
+                <p>Sign up with your mobile number to get started</p>
+                <img src="./img/flipkartloginImage.jpg">
+            </div>
+            <div class="part2">
+                <i class="fa-solid fa-x" onclick="closeSign()"></i>
+                
+                    <input type="tel" class="input-Number" placeholder="Enter Mobile number" name="user-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <p>By continuing, you agree Flipkart's <span>Terms of Use</span> and <span>Privacy Policy</span></p>
+                    <button class="sign-continue" type="submit" onclick="submit_sign()">CONTINUE</button>
+                    <button class="sign-login" onclick="openLogin()">Existing User? Log in</button>
+                    <!-- message -->
+            </div>
+        </div>
+        <div class="container" >
+            <div class="part1">
+                <h1>Login</h1>
+                <p>Get assess to your Orders,<br> Whishlist and Recommendations</p>
+                <img src="./img/flipkartloginImage.jpg">
+            </div>
+            <div class="part2 activeOTP" id="requestOTP">
+                <i class="fa-solid fa-x" onclick="closeSign()"></i>
+                <input type="tel" class="input-Number"id="input-Number-of-OTP" placeholder="Enter Mobile number" name="user-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <p>By continuing, you agree Flipkart's <span>Terms of Use</span> and <span>Privacy Policy</span></p>
+                <button class="sign-continue" type="submit" onclick="openOTP()">Request OTP</button>
+                <div class="sign-login newaccount" onclick="closeLogin()">New to Flipkart? Create an account</div>
+            </div>
+            <div class="part2" id="otpPage">
+                <p>Please enter the OTP sent to</p>
+                <div >
+                    <p id="numberOTP"></p>
+                    <span onclick="closeOTP()">.Change</span>
+                </div>
+                <input type="tel" placeholder="Enter OTP" id="verifyInput"required>
+                <div class="verifyOTP">
+                    <button id="verify"></button>
+                </div>
+                <p>Not received your code? <span id="counter"></span></p>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="main-heading">
+            <div>
+                <img src="./img/shoes/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="image">
+                <p>Grocery</p>
+            </div>
+            <div>
+                <img src="./img/shoes/daniel-storek-JM-qKEd1GMI-unsplash.jpg" alt="image">
+                <p>Mobile</p>
+            </div>
+            <div>
+                <img src="./img/shoes/domino-164_6wVEHfI-unsplash.jpg" alt="image">
+                <p>Fashion<i class="fa-solid fa-chevron-up"></i></p>
+            </div>
+            <div>
+                <img src="./img/shoes/imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="image">
+                <p>Electronics <i class="fa-solid fa-chevron-up"></i></p>
+            </div>
+            <div>
+                <img src="./img/shoes/irene-kredenets-dwKiHoqqxk8-unsplash.jpg" alt="image">
+                <p>Home & Furniture</p>
+            </div>
+            <div>
+                <img src="./img/shoes/jakob-owens-JzJSybPFb3s-unsplash.jpg" alt="image">
+                <p>Appliances <i class="fa-solid fa-chevron-up"></i></p>
+            </div>
+            <div>
+                <img src="./img/shoes/joseph-barrientos-4qSb_FWhHKs-unsplash.jpg" alt="image">
+                <p>Travel</p>
+            </div>
+            <div>
+                <img src="./img/shoes/luis-felipe-lins-LG88A2XgIXY-unsplash.jpg" alt="image">
+                <p>Beauty , Toys & More</p>
+            </div>
+            <div>
+                <img src="./img/shoes/maksim-larin-NOpsC3nWTzY-unsplash.jpg" alt="image">
+                <p>Two Wheelers <i class="fa-solid fa-chevron-up"></i></p>
+            </div>
+        </div>
+
+        <div class="scrolling-image">
+            <i class="fa-solid fa-chevron-left back"></i>
+            <div class="logos">
+                <div class="logos-slide">
+                    <img src="./img/Pictures/wallpaper.jpg"/>
+                    <img src="./img/Pictures/wallpaper2.jpg"/>
+                    <img src="./img/Pictures/wallpaper3.jpg"/>
+                </div>
+                <div class="logos-slide">
+                    <img src="./img/Pictures/wallpaper.jpg"/>
+                    <img src="./img/Pictures/wallpaper2.jpg"/>
+                    <img src="./img/Pictures/wallpaper3.jpg"/>
+                </div>
+            </div>
+            <i class="fa-solid fa-chevron-right next"></i>
+        </div>
+
+        <div class="maincontainer">
+            <div class="heading">
+                <p>Electrical Appliences</p>
+                <button><i class="fa-solid fa-chevron-up"></i></button>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./img/shoes/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="image">
+                    <p>Grocery</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/wengang-zhai-_fOL6ebfECQ-unsplash.jpg" alt="image">
+                    <p>Mobile</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="image">
+                    <p>Fashion<i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-g3CMh2nqj_w-unsplash.jpg" alt="image">
+                    <p>Electronics <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/trendest-studio-XZ3EmAIWuz0-unsplash.jpg" alt="image">
+                    <p>Home & Furniture</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt="image">
+                    <p>Appliances <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg" alt="image">
+                    <p>Travel</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/omar-prestwich-jLEGurepDco-unsplash.jpg" alt="image">
+                    <p>Beauty , Toys & More</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/martin-katler-Y4fKN-RlMV4-unsplash.jpg" alt="image">
+                    <p>Two Wheelers <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="maincontainer">
+            <div class="heading">
+                <p>Electrical Appliences</p>
+                <button><i class="fa-solid fa-chevron-up"></i></button>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./img/shoes/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="image">
+                    <p>Grocery</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/wengang-zhai-_fOL6ebfECQ-unsplash.jpg" alt="image">
+                    <p>Mobile</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="image">
+                    <p>Fashion<i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-g3CMh2nqj_w-unsplash.jpg" alt="image">
+                    <p>Electronics <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/trendest-studio-XZ3EmAIWuz0-unsplash.jpg" alt="image">
+                    <p>Home & Furniture</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt="image">
+                    <p>Appliances <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg" alt="image">
+                    <p>Travel</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/omar-prestwich-jLEGurepDco-unsplash.jpg" alt="image">
+                    <p>Beauty , Toys & More</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/martin-katler-Y4fKN-RlMV4-unsplash.jpg" alt="image">
+                    <p>Two Wheelers <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="maincontainer">
+            <div class="heading">
+                <p>Electrical Appliences</p>
+                <button><i class="fa-solid fa-chevron-up"></i></button>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./img/shoes/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="image">
+                    <p>Grocery</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/wengang-zhai-_fOL6ebfECQ-unsplash.jpg" alt="image">
+                    <p>Mobile</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="image">
+                    <p>Fashion<i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-g3CMh2nqj_w-unsplash.jpg" alt="image">
+                    <p>Electronics <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/trendest-studio-XZ3EmAIWuz0-unsplash.jpg" alt="image">
+                    <p>Home & Furniture</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt="image">
+                    <p>Appliances <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg" alt="image">
+                    <p>Travel</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/omar-prestwich-jLEGurepDco-unsplash.jpg" alt="image">
+                    <p>Beauty , Toys & More</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/martin-katler-Y4fKN-RlMV4-unsplash.jpg" alt="image">
+                    <p>Two Wheelers <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="maincontainer">
+            <div class="heading">
+                <p>Electrical Appliences</p>
+                <button><i class="fa-solid fa-chevron-up"></i></button>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./img/shoes/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="image">
+                    <p>Grocery</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/wengang-zhai-_fOL6ebfECQ-unsplash.jpg" alt="image">
+                    <p>Mobile</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="image">
+                    <p>Fashion<i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-g3CMh2nqj_w-unsplash.jpg" alt="image">
+                    <p>Electronics <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/trendest-studio-XZ3EmAIWuz0-unsplash.jpg" alt="image">
+                    <p>Home & Furniture</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt="image">
+                    <p>Appliances <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg" alt="image">
+                    <p>Travel</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/omar-prestwich-jLEGurepDco-unsplash.jpg" alt="image">
+                    <p>Beauty , Toys & More</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/martin-katler-Y4fKN-RlMV4-unsplash.jpg" alt="image">
+                    <p>Two Wheelers <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="maincontainer">
+            <div class="heading">
+                <p>Electrical Appliences</p>
+                <button><i class="fa-solid fa-chevron-up"></i></button>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./img/shoes/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="image">
+                    <p>Grocery</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/wengang-zhai-_fOL6ebfECQ-unsplash.jpg" alt="image">
+                    <p>Mobile</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="image">
+                    <p>Fashion<i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-g3CMh2nqj_w-unsplash.jpg" alt="image">
+                    <p>Electronics <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/trendest-studio-XZ3EmAIWuz0-unsplash.jpg" alt="image">
+                    <p>Home & Furniture</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt="image">
+                    <p>Appliances <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg" alt="image">
+                    <p>Travel</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/omar-prestwich-jLEGurepDco-unsplash.jpg" alt="image">
+                    <p>Beauty , Toys & More</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/martin-katler-Y4fKN-RlMV4-unsplash.jpg" alt="image">
+                    <p>Two Wheelers <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="maincontainer">
+            <div class="heading">
+                <p>Electrical Appliences</p>
+                <button><i class="fa-solid fa-chevron-up"></i></button>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./img/shoes/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="image">
+                    <p>Grocery</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/wengang-zhai-_fOL6ebfECQ-unsplash.jpg" alt="image">
+                    <p>Mobile</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="image">
+                    <p>Fashion<i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-g3CMh2nqj_w-unsplash.jpg" alt="image">
+                    <p>Electronics <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/trendest-studio-XZ3EmAIWuz0-unsplash.jpg" alt="image">
+                    <p>Home & Furniture</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt="image">
+                    <p>Appliances <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg" alt="image">
+                    <p>Travel</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/omar-prestwich-jLEGurepDco-unsplash.jpg" alt="image">
+                    <p>Beauty , Toys & More</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/martin-katler-Y4fKN-RlMV4-unsplash.jpg" alt="image">
+                    <p>Two Wheelers <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="maincontainer">
+            <div class="heading">
+                <p>Electrical Appliences</p>
+                <button><i class="fa-solid fa-chevron-up"></i></button>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./img/shoes/andres-jasso-PqbL_mxmaUE-unsplash.jpg" alt="image">
+                    <p>Grocery</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/wengang-zhai-_fOL6ebfECQ-unsplash.jpg" alt="image">
+                    <p>Mobile</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-kP6knT7tjn4-unsplash.jpg" alt="image">
+                    <p>Fashion<i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/usama-akram-g3CMh2nqj_w-unsplash.jpg" alt="image">
+                    <p>Electronics <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/trendest-studio-XZ3EmAIWuz0-unsplash.jpg" alt="image">
+                    <p>Home & Furniture</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/ryan-plomp-jvoZ-Aux9aw-unsplash.jpg" alt="image">
+                    <p>Appliances <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+                <div>
+                    <img src="./img/shoes/mojtaba-fahiminia-t4g1gctAaKk-unsplash.jpg" alt="image">
+                    <p>Travel</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/omar-prestwich-jLEGurepDco-unsplash.jpg" alt="image">
+                    <p>Beauty , Toys & More</p>
+                </div>
+                <div>
+                    <img src="./img/shoes/martin-katler-Y4fKN-RlMV4-unsplash.jpg" alt="image">
+                    <p>Two Wheelers <i class="fa-solid fa-chevron-up"></i></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="./indexf.js"></script>
+</body>
+
+</html>
